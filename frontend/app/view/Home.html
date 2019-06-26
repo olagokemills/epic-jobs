@@ -1,0 +1,229 @@
+
+    <div class="banner-job">
+        <div class="banner-overlay"></div>
+        <div class="container text-center">
+            <h1 class="title">The Easiest Way to Get Your New Job</h1>
+            <h3>We offer 12000 job Openings right now</h3>
+            <div class="banner-form">
+                
+            </div><!-- banner-form -->
+            
+            <ul class="banner-socail list-inline">
+                <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+            </ul><!-- banner-socail -->
+        </div><!-- container -->
+    </div><!-- banner-section -->
+
+    <div class="page">
+        <div class="container">
+            <div class="section category-items job-category-items  text-center">
+                <ul class="category-list">  
+                    
+                    
+                    <li class="category-item">
+                        <a href="job-list.html">
+                            <div class="category-icon"><img src="images/icon/6.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Design/Creative</span>
+                            <span class="category-quantity">(76212)</span>
+                        </a>
+                    </li><!-- category-item -->
+                    
+                    <li class="category-item">
+                        <a href="job-list.html">
+                            <div class="category-icon"><img src="images/icon/7.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Research/Consultancy</span>
+                            <span class="category-quantity">(1298)</span>
+                        </a>
+                    </li><!-- category-item -->
+                    
+                    <li class="category-item">
+                        <a href="job-list.html">
+                            <div class="category-icon"><img src="images/icon/8.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Medical/Pharma</span>
+                            <span class="category-quantity">(76212)</span>
+                        </a>
+                    </li><!-- category-item -->
+                    
+                    <li class="category-item">
+                        <a href="job-list.html">
+                            <div class="category-icon"><img src="images/icon/9.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Music & Arts</span>
+                            <span class="category-quantity">(212)</span>
+                        </a>
+                    </li><!-- category-item -->
+                    
+                    <li class="category-item">
+                        <a href="job-list.html">
+                            <div class="category-icon"><img src="images/icon/10.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Marketing/Sales</span>
+                            <span class="category-quantity">(1298)</span>
+                        </a>
+                    </li><!-- category-item -->
+                    
+                    <li class="category-item">
+                        <a href="job-list.html">
+                            <div class="category-icon"><img src="images/icon/11.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Production/Operation</span>
+                            <span class="category-quantity">(124)</span>
+                        </a>
+                    </li><!-- category-item -->
+                    
+                    <li class="category-item">
+                        <a href="job-list.html">
+                            <div class="category-icon"><img src="images/icon/12.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Miscellaneous</span>
+                            <span class="category-quantity">(972)</span>
+                        </a>
+                    </li><!-- category-item -->   
+                    
+                    <li class="category-item">
+                        <a href="{{baseurl}}/Listing/Medical">
+                            <div class="category-icon"><img src="images/icon/12.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Medicals</span>
+                        </a>
+                    </li><!-- category-item -->  
+                    
+                     <li class="category-item">
+                        <a href="{{baseurl}}/Listing/Marketing">
+                            <div class="category-icon"><img src="images/icon/12.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Marketing</span>
+                        </a>
+                    </li><!-- category-item -->  
+                    
+                     <li class="category-item">
+                        <a href="{{baseurl}}/Listing/Technology">
+                            <div class="category-icon"><img src="images/icon/12.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Technology</span>
+                        </a>
+                    </li><!-- category-item --> 
+                    
+                     <li class="category-item">
+                        <a href="{{baseurl}}/Listing/Accounting">
+                            <div class="category-icon"><img src="images/icon/12.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Accounting</span>
+                        </a>
+                    </li>
+                    
+                     <li class="category-item">
+                        <a href="{{baseurl}}/Listing/Others">
+                            <div class="category-icon"><img src="images/icon/12.png" alt="images" class="img-responsive"></div>
+                            <span class="category-title">Others</span>
+                        </a>
+                    </li><!-- category-item -->   
+                </ul>               
+            </div><!-- category ad -->          
+
+            <div class="section latest-jobs-ads">
+                <div class="section-title tab-manu">
+                    <h4>Latest Jobs</h4>
+                     <!-- Nav tabs -->      
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation"><a href="{{baseurl}}Listings">All Jobs</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+
+                    <div role="tabpanel" class="tab-pane fade in active" id="popular-jobs" ng-if="main.data !=='No Content'">
+                        <div ng-if="index < 8" ng-repeat="(index, x) in main.data['jobs']">
+                        <div class="job-ad-item">
+                            <div class="item-info">
+                                <div class="item-image-box">
+                                    <div class="item-image">
+                                        <a href="{{baseurl}}Listing/{{x.category.split(' ').join('-')}}/{{x.title.split(' ').join('-')}}" ><img src="images/job/1.png" alt="Image" class="img-responsive"></a>
+                                    </div><!-- item-image -->
+                                </div>
+
+                                <div class="ad-info">
+                                    <span><a href="{{baseurl}}Listing/{{x.category.split(' ').join('-')}}/{{x.title.split(' ').join('-')}}"  class="title" ng-bind="x.title"> </a> @ <strong>{{x.company}}</strong></span>
+                                    <div class="ad-meta">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>{{x.location}}</a></li>
+                                            <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>{{x.jobtype}}</a></li>
+                                            <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>{{x.salary}}</a></li>
+                                            <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>{{x.category}}</a></li>
+                                        </ul>
+                                    </div><!-- ad-meta -->                                  
+                                </div><!-- ad-info -->
+                                <div class="button">
+                                    <a href="{{baseurl}}Listing/{{x.category.split(' ').join('-')}}/{{x.title.split(' ').join('-')}}" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div><!-- item-info -->
+                        </div><!-- ad-item -->  
+                        </div>
+                    </div><!-- tab-pane -->
+                </div><!-- tab-content -->
+            </div><!-- trending ads -->     
+
+            <div class="section cta cta-two text-center">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="single-cta">
+                            <div class="cta-icon icon-jobs">
+                                <img src="images/icon/31.png" alt="Icon" class="img-responsive">
+                            </div><!-- cta-icon -->
+                            <h3>{{main.data['jobs'].length}}</h3>
+                            <h4>Live Jobs</h4>
+                            <p>Available jobs here for you!</p>
+                        </div>
+                    </div><!-- single-cta -->
+
+                    <div class="col-sm-4">
+                        <div class="single-cta">
+                            <!-- cta-icon -->
+                            <div class="cta-icon icon-company">
+                                <img src="images/icon/32.png" alt="Icon" class="img-responsive">
+                            </div><!-- cta-icon -->
+                            <h3>{{main.data['company'].length}}</h3>
+                            <h4>Companies</h4>
+                            <p>These Companies are hiring, Come in Now</p>
+                        </div>
+                    </div><!-- single-cta -->
+
+                    <div class="col-sm-4">
+                        <div class="single-cta">
+                            <div class="cta-icon icon-candidate">
+                                <img src="images/icon/33.png" alt="Icon" class="img-responsive">
+                            </div><!-- cta-icon -->
+                            <h3>{{main.data['seekers'].length}}</h3>
+                            <h4>Total Candidate</h4>
+                            <p>These People have applied here, join now and enjoy!</p>
+                        </div>
+                    </div><!-- single-cta -->
+                </div><!-- row -->
+            </div><!-- cta -->          
+
+        </div><!-- conainer -->
+    </div><!-- page -->
+    
+    <!-- download -->
+    <section id="download" class="clearfix parallax-section">
+        <div class="container">
+            <div class="row">
+               
+            </div><!-- row -->
+
+            <!-- row -->
+            <div class="row">
+                <!-- download-app -->
+                <div class="col-sm-4">
+                   
+                </div><!-- download-app -->
+
+                <!-- download-app -->
+                <div class="col-sm-4">
+                   
+                </div><!-- download-app -->
+
+                <!-- download-app -->
+                <div class="col-sm-4">
+                    
+                </div><!-- download-app -->
+            </div><!-- row -->
+        </div><!-- contaioner -->
+    </section><!-- download -->
+<!-- footer -->

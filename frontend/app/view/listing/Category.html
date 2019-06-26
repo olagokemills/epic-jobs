@@ -1,0 +1,147 @@
+	<section class="job-bg page job-list-page">
+		<div class="container">
+			<div class="breadcrumb-section">
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+					<li><a href="index-2.html">Home</a></li>
+					<li>Engineer/Architects</li>
+				</ol><!-- breadcrumb -->						
+				<h2 class="title">Software Engineer</h2>
+			</div>
+
+			<div class="banner-form banner-form-full job-list-form">
+				
+			</div><!-- banner-form -->
+	
+			<div class="category-info">	
+				<div class="row">
+					<div class="col-md-3 col-sm-4">
+						<div class="accordion">
+							<!-- panel-group -->
+							<div class="panel-group" id="accordion">
+							 	
+								<!-- panel -->
+								<div class="panel panel-default panel-faq">
+									<!-- panel-heading -->
+									<div class="panel-heading">
+										<div  class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion" href="#accordion-one">
+												<h4>Categories<span class="pull-right"><i class="fa fa-minus"></i></span></h4>
+											</a>
+										</div>
+									</div><!-- panel-heading -->
+
+									<div id="accordion-one" class="panel-collapse collapse in">
+										<!-- panel-body -->
+										<div class="panel-body">
+											<h5><a href="categories-main.html"><i class="fa fa-caret-down"></i> All Categories</a></h5>
+											<a href="{{baseurl}}/Listing/Engineer"><i class="icofont icofont-man-in-glasses"></i>Engineer/Architects</a>
+											<ul>
+												<li><a href="{{baseurl}}/Listing/Technology">Technology <span>(129)</span></a></li>
+												<li><a href="{{baseurl}}/Listing/Architecture">Architecture <span>(8342)</span></a></li>
+												<li><a href="{{baseurl}}/Listing/Accounting">Accounting <span>(782)</span></a></li>
+												<li><a href="{{baseurl}}/Listing/Medical">Medical <span>(5247)</span></a></li>
+												<li><a href="#">Civil Engineer <span>(634)</span></a></li>
+												<li><a href="#">Chemical Engineer <span>(453)</span></a></li>
+												>
+											</ul>
+											<div class="see-more">
+												<button type="button" class="show-more one"><i class="fa fa-plus-square-o" aria-hidden="true"></i>See More</button>
+												<ul class="more-category one">
+													<li><a href="#">Fron end developer<span>(289)</span></a></li>
+													<li><a href="#">Back end developer<span>(5402)</span></a></li>
+													<li><a href="#">IT Department Manager<span>(3829)</span></a></li>
+													<li><a href="#">QA Department Manager<span>(352)</span></a></li>
+												</ul>
+											</div>
+
+										</div><!-- panel-body -->
+									</div>
+								</div><!-- panel -->
+
+							 </div><!-- panel-group -->
+						</div>
+					</div><!-- accordion-->
+
+					<!-- recommended-ads -->
+					<div class="col-sm-10 col-md-9">				
+						<div class="section job-list-item">
+							<div class="featured-top">
+								<h4>Showing Available Jobs</h4>
+								<div class="dropdown pull-right">
+									<div class="dropdown category-dropdown">
+										<h5>Sort by:</h5>						
+										<a data-toggle="dropdown" href="#"><span class="change-text">Most Relevant</span><i class="fa fa-caret-square-o-down"></i></a>
+										<ul class="dropdown-menu category-change">
+											<li><a href="#">Most Relevant</a></li>
+											<li><a href="#">Most Popular</a></li>
+										</ul>								
+									</div><!-- category-change -->		
+								</div>							
+							</div><!-- featured-top -->	
+							<div ng-if="list.data == 'No content'">
+                    <h2>No Content to Display</h2>
+                </div>
+						<div ng-if="main.data !== 'No Content'">
+							<div  ng-if="index < 8" ng-repeat="(index, x) in list.data">
+						 <div class="job-ad-item">
+                            <div class="item-info">
+                                <div class="item-image-box">
+                                    <div class="item-image">
+                                        <a href="{{baseurl}}Listing/{{x.category.split(' ').join('-')}}/{{x.title.split(' ').join('-')}}" ><img src="images/job/1.png" alt="Image" class="img-responsive"></a>
+                                    </div><!-- item-image -->
+                                </div>
+
+                                <div class="ad-info">
+                                    <span><a href="{{baseurl}}Listing/{{x.category.split(' ').join('-')}}/{{x.title.split(' ').join('-')}}" class="title" ng-bind="x.title"> </a> @ <strong>{{x.company}}</strong></span>
+                                    <div class="ad-meta">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>{{x.location}}</a></li>
+                                            <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>{{x.type}}</a></li>
+                                            <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>{{x.salary}}</a></li>
+                                            <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>{{x.category}}</a></li>
+                                        </ul>
+                                    </div><!-- ad-meta -->                                  
+                                </div><!-- ad-info -->
+                                <div class="button">
+                                    <a href="{{baseurl}}Listing/{{x.category.split(' ').join('-')}}/{{x.title.split(' ').join('-')}}" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div><!-- item-info -->
+                        </div>
+                    </div>
+							<!-- pagination  -->
+							<div class="text-center">
+								<ul class="pagination ">
+									<li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+									<li><a href="#">1</a></li>
+									<li class="active"><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a>...</a></li>
+									<li><a href="#">10</a></li>
+									<li><a href="#">20</a></li>
+									<li><a href="#">30</a></li>
+									<li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+								</ul>
+							</div><!-- pagination  -->					
+						</div>
+					</div><!-- recommended-ads -->
+
+				</div>	
+			</div>
+		</div><!-- container -->
+	</section><!-- main -->
+	
+	
+	<section id="something-sell" class="clearfix parallax-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<h2 class="title">Add your resume and let your next job find you.</h2>
+					<h4>Post your Resume for free on <a href="#">Jobs.com</a></h4>
+					<a href="register.html" class="btn btn-primary">Join Now</a>
+				</div>
+			</div><!-- row -->
+		</div><!-- contaioner -->
+	</section><

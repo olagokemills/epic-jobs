@@ -1,0 +1,95 @@
+
+	<section class="job-bg page job-details-page">
+		<div class="container">
+			<div class="breadcrumb-section">
+				<ol class="breadcrumb">
+					<li><a href="index-2.html">Home</a></li>
+					<li><a href="job-list.html">Jobs</a></li>
+					<li>Job Details</li>
+				</ol><!-- breadcrumb -->						
+				<h2 class="title">{{list.data['details']['jobtype']}}</h2>
+			</div><!-- breadcrumb -->
+
+			<div class="banner-form banner-form-full job-list-form">
+				
+			</div><!-- banner-form -->
+
+			<div class="job-details">
+				<div class="section job-ad-item">
+					<div class="item-info">
+						<div class="item-image-box">
+							<div class="item-image">
+								<img src="images/job/4.png" alt="Image" class="img-responsive">
+							</div><!-- item-image -->
+						</div>
+						<p class="text-success" ng-bind="list.succMsg"></p>
+
+						<div class="ad-info">
+							<span><span><a href="#" class="title">{{list.data['details']['title']}}</a>
+							</span> 
+							@ <a href="#">{{list.data['details']['company']}}</a></span>
+							<div class="ad-meta">
+								<ul>
+									<li><i class="fa fa-map-signs" aria-hidden="true"></i>{{list.data['details']['location']}}</li>
+									<li><i class="fa fa-map-marker" aria-hidden="true"></i>{{list.data['details']['jobtype']}}</li>
+									<li><i class="fa fa-money" aria-hidden="true"></i>{{list.data['details']['salary']}}</li>
+									<li><i class="fa fa-tags" aria-hidden="true"></i>{{list.data['details']['category']}}</li>
+									<li><i class="fa fa-hourglass-start" aria-hidden="true"></i>Application Deadline :
+									{{list.data['details']['deadline']}}</li>
+								</ul>
+							</div><!-- ad-meta -->									
+						</div><!-- ad-info -->
+					</div><!-- item-info -->
+					<div class="social-media">
+						<div class="button">
+							<a ng-click="list.apply()" class="btn btn-primary"><i class="fa fa-briefcase" aria-hidden="true"></i>Apply For This Job</a>
+							
+						</div>
+						<ul class="share-social">
+							<li>Share this ad</li>
+							<li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-tumblr-square" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>					
+				</div><!-- job-ad-item -->
+				
+				<div class="job-details-info">
+					<div class="row">
+						<div class="col-sm-8">
+							<div class="section job-description">
+								<div class="description-info">
+									<h1>Description</h1>
+
+						<p>{{list.data['details']['description']}}</p> <br>
+								</div>
+								<div class="responsibilities">
+									<h1>Key Responsibilities:</h1>
+						<p>{{list.data['details']['function']}}</span>
+								</div>
+								<div class="requirements">
+									<h1>Minimum Requirements</h1>
+								<p>{{list.data['details']['requirements']}}</p>
+								</div>							
+							</div>							
+						</div>
+						<div class="col-sm-4">
+							<div class="section job-short-info">
+								<h1>Short Info</h1>
+								<ul>
+									<li><div class="pull-left"><i class="fa fa-calendar" aria-hidden="true"></i></div> <div class="media-body"><span>Published:</span>{{list.data['details']['postedon']}}</div></li>
+									<li><div class="pull-left"><i class="fa fa-user-plus" aria-hidden="true"></i></div> <div class="media-body"><span>Job poster:</span>{{list.data['details']['postedby']}}</div></li>
+									<li><div class="pull-left"><i class="fa fa-industry" aria-hidden="true"></i></div> <div class="media-body"><span>Industry:</span>{{list.data['details']['category']}}</div></li>
+									<li><div class="pull-left"><i class="fa fa-line-chart" aria-hidden="true"></i></div> <div class="media-body"><span>Experience:</span>{{list.data['details']['level']}}</div></li>
+									<li><div class="pull-left"><i class="fa fa-key" aria-hidden="true"></i></div> <div class="media-body"><span>Job function:</span>{{list.data['details']['function']}}</div></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- row -->					
+				</div><!-- job-details-info -->				
+			</div><!-- job-details -->
+		</div><!-- container -->
+	</section><!-- job-details-page -->

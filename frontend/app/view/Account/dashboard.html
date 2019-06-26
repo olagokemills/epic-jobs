@@ -1,0 +1,78 @@
+<section class=" job-bg page  ad-profile-page">
+		<div class="container">
+			<div class="breadcrumb-section">
+				<ol class="breadcrumb">
+					<li><a href="{{baseurl}}">Home</a></li>
+					<li>User Profile</li>
+				</ol>						
+				<h2 class="title">My Profile</h2>
+			</div><!-- breadcrumb-section -->
+			
+			<div class="job-profile section">	
+				<div class="user-profile">
+					<div class="user-images">
+						<img src="images/user.jpg" alt="User Images" class="img-responsive">
+					</div>
+					<div class="user">
+						<h2>Hello, <a href="#">{{userinfo.firstname}}  {{userinfo.lastname}}</a></h2>>
+					</div>
+
+					<div class="favorites-user">
+						<div class="my-ads">
+							<a>29<small>Applied Jobs</small></a>
+						</div>
+					
+					</div>								
+				</div><!-- user-profile -->
+						
+				<ul class="user-menu">
+					<li class="active"><a href="{{baseurl}}Account/Dashboard">Account Info </a></li>
+					<li><a href="{{baseurl}}Account/EditProfile">Edit Profile</a></li>
+					<li><a href="{{baseurl}}Account/Applied">Applied jobs</a></li>
+					<li><a href="{{baseurl}}Account/Delete">Delete account</a></li>
+					<li><a ng-click="accounts.logout()">Log out</a></li>
+				</ul>
+			</div><!-- ad-profile -->
+
+			<div class="resume-content">
+				<div class="profile section clearfix">
+					<div class="profile-logo">
+					    <img class="img-responsive" src="images/job/resume.jpg" alt="Image">
+					</div>
+					<div class="profile-info">
+					    <h1>{{userinfo.username}}</h1>
+					    <address>
+					        <p>{{userinfo.address}}</a></p>
+					    </address>
+
+					    <div class="download-button resume pull-right">
+
+					    	<form method="POST" enctype="multipart/form-data">
+                            <input type="file" ng-file-model="files" id="file" class="form-control hidden">
+                        </form>
+						<button href="#" ng-click="accounts.upload()" id="uploader" class="btn btn-primary">
+							<span ng-if="!userinfo.cv">Upload Resume</span>
+							<span ng-if="userinfo.cv">Update Cv</span>
+						</button>
+						</div>
+					</div>					
+				</div><!-- profile -->
+
+				<div class="personal-deatils section">
+				    <div class="icons">
+				        <i class="fa fa-user-secret" aria-hidden="true"></i>
+				    </div>  
+				    <div class="personal-info">
+				    	<h3>Personal Deatils</h3>
+				        <ul class="address">
+				            <li><h5>Full Name </h5> <span>:</span>{{userinfo.firstname}} {{userinfo.lastname}}</li>
+				            <li><h5>Username </h5> <span>:</span>{{userinfo.username}}</li>
+				            <li><h5>Sex </h5> <span>:</span>{{userinfo.gender}}</li>
+				            <li><h5>Phone </h5> <span>:</span>{{userinfo.phone}}</li>
+				            <li><h5>Email </h5> <span>:</span>{{userinfo.email}}</li>
+				        </ul>    	
+				    </div>                               
+				</div><!-- personal-deatils -->	
+			</div><!-- resume-content -->						
+		</div><!-- container -->
+	</section><!-- ad-profile-page -->
